@@ -54,7 +54,7 @@ The Block Storage plug-in is a persistent, high-performance iSCSI storage that y
 - Give a **name** to this workspace
 - Click **install** and wait for the deployment
 
-# **Step 3 **Installing **Node Exporter**
+# Step 3 Installing Node Exporter
 
 The [node exporter](https://github.com/prometheus/node_exporter) can read system-level statistics about bare-metal nodes or virtual machines and export them for Prometheus.
 
