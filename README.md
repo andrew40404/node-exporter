@@ -64,39 +64,17 @@ Download the [node exporter daemon set manifest](https://coreos.com/assets/blog/
 
 ```sh
 $ kubectl create -f node-exporter.yaml
-```
-
-```sh
 daemonset "node-exporter" created
 ```
-
 Verify that four node exporter pods have been started:
 
 ```sh
 $ kubectl **get** pods
-```
-
-```sh
 NAME READY STATUS RESTARTS AGE
-```
-
-```sh
 node-exporter-4r4vq 1/1 Running 0 1m
-```
-
-```sh
 node-exporter-6n2ah 1/1 Running 0 1m
-```
-
-```sh
 node-exporter-9x57u 1/1 *Running* 0 1m
-```
-
-```sh
 node-exporter-dk99a 1/1 Running 0 1m
-```
-
-```sh
 prometheus-1189099554-6ah3y 1/1 Running 0 1h
 ```
 
@@ -116,7 +94,7 @@ The command deploys node exporter on the Kubernetes cluster in the default confi
 
 **Uninstalling the Chart**
 
-To uninstall/delete the *my-release* deployment:
+To uninstall/delete the 'my-release' deployment:
 
 ```sh
 $ helm delete my-release
@@ -128,9 +106,6 @@ The command removes all the Kubernetes components associated with the chart and 
 
 ```sh
 # Helm 3 or 2
-```
-
-```sh
 $ helm upgrade [RELEASE_NAME] [CHART] --install
 ```
 
@@ -138,16 +113,9 @@ $ helm upgrade [RELEASE_NAME] [CHART] --install
 
 ```sh
 # Helm 2
-```
-
-```sh
 $ helm inspect values prometheus-community/prometheus-node-exporter
-```
-
-```sh
 # Helm 3
-```
-
-```sh
 $ helm show values prometheus-community/prometheus-node-exporter
 ```
+The installation is done. Enjoy!
+
