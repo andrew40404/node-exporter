@@ -1,6 +1,8 @@
+# Installing Node Exporter on IBM Cloud
+
 This document will describe how to install Node Exporter on IBM Cloud using Kubernetes services.
 
-**Step 1 - provision Kubernetes Cluster**
+**Step 1 - Provision Kubernetes Cluster**
 
 - Click the **Catalog** button on the top
 - Select **Service** from the **Catalog**
@@ -54,7 +56,7 @@ The Block Storage plug-in is a persistent, high-performance iSCSI storage that y
 - Give a **name** to this workspace
 - Click **install** and wait for the deployment
 
-# Step 3 Installing Node Exporter
+**Step 3 Installing Node Exporter**
 
 The [node exporter](https://github.com/prometheus/node_exporter) can read system-level statistics about bare-metal nodes or virtual machines and export them for Prometheus.
 
@@ -62,13 +64,13 @@ Using a [DaemonSet](http://kubernetes.io/docs/admin/daemons/), Kubernetes can ru
 
 Download the [node exporter daemon set manifest](https://coreos.com/assets/blog/promk8s/node-exporter.yaml) and deploy it:
 
-```sh
+```yaml
 $ kubectl create -f node-exporter.yaml
 daemonset "node-exporter" created
 ```
 Verify that four node exporter pods have been started:
 
-```sh
+```yaml
 $ kubectl **get** pods
 NAME READY STATUS RESTARTS AGE
 node-exporter-4r4vq 1/1 Running 0 1m
@@ -109,7 +111,7 @@ The command removes all the Kubernetes components associated with the chart and 
 $ helm upgrade [RELEASE_NAME] [CHART] --install
 ```
 
-## Configuring
+**Configuring**
 
 ```sh
 # Helm 2
