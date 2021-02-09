@@ -71,11 +71,11 @@ daemonset "node-exporter" created
 Verify that four node exporter pods have been started:
 
 ```yaml
-$ kubectl **get** pods
+$ kubectl get pods
 NAME READY STATUS RESTARTS AGE
 node-exporter-4r4vq 1/1 Running 0 1m
 node-exporter-6n2ah 1/1 Running 0 1m
-node-exporter-9x57u 1/1 *Running* 0 1m
+node-exporter-9x57u 1/1 Running 0 1m
 node-exporter-dk99a 1/1 Running 0 1m
 prometheus-1189099554-6ah3y 1/1 Running 0 1h
 ```
