@@ -2,7 +2,7 @@
 
 This document will describe how to install Node Exporter on IBM Cloud using Kubernetes services.
 
-**Step 1 - Provision Kubernetes Cluster**
+## Step 1 - Provision Kubernetes Cluster
 
 - Click the **Catalog** button on the top
 - Select **Service** from the **Catalog**
@@ -11,7 +11,6 @@ This document will describe how to install Node Exporter on IBM Cloud using Kube
   ![Node Exporter2](https://user-images.githubusercontent.com/5286796/106587901-2d8eae00-6570-11eb-9006-eaace4f27f60.png)
 
 - You are now at the Kubernetes deployment page. You need to specify some information about the cluster.
-
 - Choose either of the following plans; **standard** or **free**. The free plan only have one worker node and no subnet. To provision a standard cluster. You will need to upgrade your account to Pay-As-You-Go
 - To upgrade to a Pay-As-You-Go account, complete the following steps:
 - In the console, go to Manage > Account.
@@ -34,17 +33,16 @@ This document will describe how to install Node Exporter on IBM Cloud using Kube
 > 
 
 - If at your current location selection, there is no available Virtual LAN, a new VLAN will be created for you
-- Choose a Worker node setup or use the preselected one. SSet Worker node amount per zone
+- Choose a Worker node setup or use the preselected one. Set Worker node amount per zone
 - Choose **Master Service Endpoint**. 
 
 > In VRF-enabled accounts, you can choose private-only to make your master accessible on the private network or via VPN tunnel. Choose public-only to make your master publicly accessible. When you have a VRF-enabled account, your cluster is set up by default to use both private and public endpoints.
    
-- Give desired **tags** to your cluster, for more information visit tags
-- Click **create**
+- Give desired **tags** to your cluster, click **create**
 - Wait for your cluster to be provisioned
 - Your cluster is ready for usage
 
-**Step 2 Deploy IBM Cloud Block Storage plug-in**
+## Step 2 Deploy IBM Cloud Block Storage plug-in
 
 The Block Storage plug-in is a persistent, high-performance iSCSI storage that you can add to your apps by using Kubernetes Persistent Volumes (PVs).
 
@@ -56,7 +54,7 @@ The Block Storage plug-in is a persistent, high-performance iSCSI storage that y
 - Give a **name** to this workspace
 - Click **install** and wait for the deployment
 
-**Step 3 Installing Node Exporter**
+## Step 3 Installing Node Exporter
 
 The [node exporter](https://github.com/prometheus/node_exporter) can read system-level statistics about bare-metal nodes or virtual machines and export them for Prometheus.
 
@@ -80,11 +78,11 @@ node-exporter-dk99a 1/1 Running 0 1m
 prometheus-1189099554-6ah3y 1/1 Running 0 1h
 ```
 
-**Introduction**
+### Introduction
 
 This chart bootstraps a prometheus [node exporter](http://github.com/prometheus/node_exporter) deployment on a [Kubernetes](http://kubernetes.io/) cluster using the [Helm](https://helm.sh/) package manager.
 
-**Installing the Chart**
+### Installing the Chart
 
 To install the chart with the release name my-release:
 
@@ -94,7 +92,7 @@ $ helm install --name my-release stable/prometheus-node-exporter
 
 The command deploys node exporter on the Kubernetes cluster in the default configuration. The [configuration](https://github.com/helm/charts/tree/master/stable/prometheus-node-exporter#configuration) section lists the parameters that can be configured during installation.
 
-**Uninstalling the Chart**
+### Uninstalling the Chart
 
 To uninstall/delete the 'my-release' deployment:
 
@@ -104,14 +102,14 @@ $ helm delete my-release
 
 The command removes all the Kubernetes components associated with the chart and deletes the release.
 
-**Upgrading Chart**
+### Upgrading Chart
 
 ```sh
 # Helm 3 or 2
 $ helm upgrade [RELEASE_NAME] [CHART] --install
 ```
 
-**Configuring**
+### Configuring
 
 ```sh
 # Helm 2
